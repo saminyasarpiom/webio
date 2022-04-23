@@ -1,0 +1,993 @@
+@import url('https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rampart+One&family=Rancho&family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Boogaloo&display=swap');
+/*
+    font-family: 'Klee One', cursive;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Rampart One', cursive;
+    font-family: 'Rancho', cursive;
+    font-family: 'Satisfy', cursive;
+    font-family: 'Boogaloo', cursive;
+*/
+
+/* BASIC SETTINGS */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.section-title{
+    font-family: 'Klee One', cursive;
+    font-weight: 600;
+    font-size: 1.45rem;
+    color: tomato;
+    text-align: center;
+    margin: 10px 0px;
+    text-transform: uppercase;
+}
+
+.section-info{
+    font-family: 'Poppins', Cursive;
+    font-size: 23px;
+    font-weight: 300;
+    color: tomato;
+    text-align: justify;
+}
+
+.test{
+    background: url(Pics/Background.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: none;
+    width: 100%;
+    height: 300vh;
+}
+/* BASIC SETTINGS */
+
+
+
+
+/* HEADER */
+.white{
+    color: white;
+}
+
+a{
+    text-decoration: none;
+}
+
+.openbtn, .closebtn{
+    display: none;
+}
+
+.header{
+    background: transparent;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px 20px 80px;
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    transition: all 0.7s;
+    box-sizing: border-box;
+}
+
+.logo{
+    font-family: 'Satisfy', cursive;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: tomato;
+    z-index: 999;
+    word-spacing: 10px;
+    padding-top: 3.2px;
+}
+
+.logo-cover-left{
+    height: 50px;
+    width: 165px;
+    background: tomato;
+    position: absolute;
+    left: 0px;
+    z-index: 998;
+}
+
+.logo-cover-right{
+    border: 2px solid tomato;
+    width: 238px;
+    height: 50px;
+    box-sizing: border-box;
+    position: absolute;
+    left: 150px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    z-index: 998;
+}
+
+.navlinks{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.navlinks li{
+    list-style: none;
+    margin-right: 10px;
+    padding: 5px 20px 7px 20px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.5s;
+}
+
+.navlinks li:last-child{
+    margin-right: 0px;
+}
+
+.navlinks li a{
+    font-family: 'Boogaloo', cursive;
+    font-size: 1.45rem;
+    color: tomato;
+    z-index: 999;
+    transition: all 0.5s;
+}
+
+.contact-btn{
+    background: tomato;
+    margin-left: 20px;
+    border-radius: 50px;
+}
+
+.contact-btn a{
+    color: white!important;
+}
+
+.contact-btn:hover{
+    background: transparent;
+}
+
+.contact-btn:hover a{
+    color: tomato!important;
+}
+
+.navlinks li:hover{
+    border: 2px solid tomato;
+}
+
+.navlinks li:hover .submenu{
+    top: 40px;
+    opacity: 1;
+    pointer-events: all;
+}
+
+.submenu-h{
+    position: relative;
+}
+
+.submenu{
+    min-width: 155px;
+    max-width: 170px;
+    position: absolute;
+    background-color: tomato;
+    top: 100px;
+    opacity: 0;
+    pointer-events: none;
+    left: -6px;
+    border: 1px solid tomato;
+    border-radius: 8px;
+    transition: 0.5s;
+}
+
+.submenu li{
+    margin-right: 0px;
+    border-radius: 5px;
+}
+
+.submenu li a{
+    color: white;
+    font-size: 1.3rem;
+}
+
+.submenu li:first-child:hover{
+    background: white;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.submenu li:last-child:hover{
+    background: white;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.submenu li:hover a{
+    color: tomato;
+}
+
+
+@media screen and (max-width: 900px){
+.openbtn{
+    display: block;
+    z-index: 999;
+    cursor: none;
+}
+
+.openbtn .bar{
+    display: block;
+    background: tomato;
+    z-index: 999;
+    width: 25px;
+    height: 4px;
+    margin-bottom: 3px;
+    border-radius: 1px;
+}
+
+.closebtn{
+    display: block;
+    position: absolute;
+    top: 12px;
+    right: 40px;
+    color: tomato;
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: none;
+}
+
+.logo{
+    z-index: 1002;
+}
+
+.logo-cover-left, .logo-cover-right{
+    z-index: 1001;
+}
+
+.navlinks{
+    flex-direction: column;
+    background: white;
+    opacity: 1;
+    z-index: 1000;
+    top: -100%;
+    right: 0px;
+    bottom: 100%;
+    left: 0px;
+    position: fixed;
+    transition: all 0.4s;
+}
+
+.navlinks li{
+    margin-right: 0px;
+}
+
+.contact-btn{
+    margin-left: 0px;
+    margin-top: 15px;
+}
+
+.navlinks li a{
+    font-size: 1.7rem;
+}
+
+.submenu{
+    width: 150px;
+    right: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.submenu li{
+    text-align: center;
+}
+
+.submenu li a{
+    font-size: 1.5rem;
+}
+}
+
+
+@media screen and (max-width: 600px){
+.header{
+    padding: 20px 20px;
+    height: 65px;
+}
+
+.logo{
+    font-size: 1.4rem;
+    padding-top: 1px;
+}
+
+.logo-cover-left{
+    width: 81px;
+    height: 42px;
+}
+
+.logo-cover-right{
+    left: 70px;
+    width: 180px;
+    height: 42px;
+}
+
+.closebtn{
+    right: 20px;
+    top: 5px;
+}
+}
+/* HEADER */
+
+
+
+
+/* ABOUT */
+.about{
+    background: url(Pics/Banner.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 100px;
+    min-height: 100vh;
+}
+
+.about > .section-title{
+    font-size: 30px;
+}
+
+.about > .section-info{
+    font-size: 25px;
+}
+
+
+
+@media screen and (max-width: 600px){
+.about{
+    padding: 80px 35px;
+}
+}
+/* ABOUT */
+
+
+
+
+/* SKILLS */
+#skills{
+    padding: 7px 20px 20px 20px;
+    background-color: #ecf5f5;
+}
+
+#skills .section-title{
+    color: black;
+}
+
+.skill-boxes{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill-box{
+    width: 300px;
+    height: 510px;
+    background-color: #f2f8f8;
+    margin: 15px 20px 40px 20px;
+    border-radius: 15px;
+    box-shadow: 10px 10px 10px #4d4d4d46, -10px -10px 10px #fff;
+    padding: 20px;
+}
+
+.skill-name{
+    font-family: 'Rancho', cursive;
+    color: #000653;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.si1{
+    background: url(Pics/Video.jpg);
+}
+
+.si2{
+    background: url(Pics/Graphics.jpg);
+}
+
+.si3{
+    background: url(Pics/Software.jpg);
+}
+
+.si4{
+    background: url(Pics/Game.jpg);
+}
+
+.si5{
+    background: url(Pics/Web.jpg);
+}
+
+.skill-image{
+    height: 150px;
+    width: 260px;
+    /* border: 1px solid #ddd; */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: inset 2px 2px 5px #4d4d4d46, inset -2px -2px 5px rgb(201, 201, 201);
+    margin: 10px 0px;
+    border-radius: 4px;
+}
+
+.skill-info{
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    text-align: justify;
+}
+
+
+
+@media screen and (max-width: 300px){
+.skill-box{
+    width: 270px;
+    height: 490px;
+}
+
+.skill-image{
+    width: 230px;
+}
+}
+/* SKILLS */
+
+
+
+
+/* My YouTube Journey */
+#youtube{
+    background: url(Pics/YouTubeBGTexture.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 40px 20px 20px 40px;
+}
+
+#youtube > .section-title, #youtube > .section-info{
+    color: white;
+}
+
+.yt-header{
+    font-family: 'Rampart One', cursive;
+    color: white;
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.yt-text{
+    font-size: 1.1rem;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    text-align: justify;
+    margin: 15px 0px;
+}
+
+.iframe-videos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+iframe{
+    margin: 15px;
+    border: 2px solid white;
+}
+
+iframe:hover{
+    border: 2px solid rgb(253, 41, 41);
+}
+
+.first-two-videos{
+    padding: 20px;
+}
+
+.first-two-videos > .section-title, .first-two-videos .section-info{
+    color: white;
+}
+
+.ftv-header{
+    text-align: center;
+    font-family: 'Balsamiq Sans', cursive;
+    font-size: 1.25rem;
+    color: white;
+    margin-bottom: 7px;
+}
+
+.ftv-link{
+    text-decoration: underline;
+    color: #d7fcff;
+    font-family: 'Poppins', sans-serif;
+    display: block;
+    text-align: center;
+    font-size: 1.1rem;
+    font-style: italic;
+}
+
+.ftv-note{
+    font-family: 'Poppins', sans-serif;
+    font-size: .9rem;
+    color: #eee;
+    text-align: center;
+    margin-top: 13px;
+    margin-bottom: 13px;
+}
+
+.yt-channels{
+    margin-top: 20px;
+}
+
+
+.yt-channels .section-title, .yt-channels .section-info{
+    color: white;
+}
+
+.yt-channels-header{
+    text-align: center;
+    font-family: 'Balsamiq Sans', cursive;
+    font-size: 1.25rem;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.channel-boxes{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.channel-box{
+    width: 420px;
+    height: 700px;
+    margin: 15px 25px 40px 25px;
+    background: url(Pics/YTBoxBG.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    box-shadow: 10px 10px 10px #ff1b1bcb, -10px -10px 10px #ff5d5d;
+    /* padding: 20px; */
+}
+
+.ch1{
+    background: url(Pics/CK.jpg);
+}
+
+.ch2{
+    background: url(Pics/SSY.jpg);
+}
+
+.ch3{
+    background: url(Pics/ML.jpg);
+}
+
+.channel-logo{
+    height: 230px;
+    width: 420px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.channel-name{
+    font-family: 'Rancho', cursive;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.4rem;
+    margin: 10px 0px;
+}
+
+.channel-info{
+    font-family: 'Poppins', sans-serif;
+    text-align: justify;
+    padding: 0px 15px;
+}
+
+.channel-bod{
+    font-family: 'Poppins', Cursive;
+    color: #1f1f1f;
+    text-align: center;
+    margin: 10px 0px;
+}
+
+.channel-link{
+    display: block;
+    text-align: center;
+    margin: 20px 40px;
+    padding: 10px 0px;
+    border: 2px solid #1f1f1f;
+    border-radius: 30px;
+    text-decoration: none;
+    font-family: 'Poppins', cursive;
+    color: #1f1f1f;
+    transition: all 0.6s;
+    transition-property: background, border, color;
+}
+
+.channel-link:hover{
+    background: linear-gradient(to right, #ff0000, #ff3c00,  #ff7300);
+    border: 2px solid white;
+    color: #fff;
+}
+
+.extra-margin{
+    margin-top: 60px;
+}
+
+@media screen and (max-width: 320px){
+.channel-box{
+    width: 290px;
+    height: 730px;
+}
+
+.channel-logo{
+    width: 290px;
+}
+}
+
+@media screen and (max-width:300px){
+.channel-box{
+    width: 270px;
+    height: 770px;
+}
+
+.channel-logo{
+    width: 270px;
+}
+}
+/* My YouTube Journey */
+
+
+
+
+/* APPS */
+.apps{
+    padding: 20px 0px;
+}
+
+.apps .section-title{
+    color: #000;
+}
+
+.apps .apps-info{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 0px 20px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+
+.apps .apps-info .section-info{
+    color: #333;
+    width: 60%;
+    padding-top: 11px;
+    padding-right: 10px;
+    margin-bottom: 10px;
+}
+
+.apps .apps-info iframe{
+    width: 20%;
+    margin-right: 0px;
+    margin-left: 0px;
+    height: auto;
+}
+
+.app-list{
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.app{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    text-decoration: none;
+    padding: 10px;
+    border: 1px solid transparent;
+    transition: all 1s;
+    /* transition-property: border; */
+}
+
+.app:hover{
+    border: 1px solid #ddd;
+}
+
+.app img{
+    width: 100px;
+}
+
+.app label{
+    font-family: 'Rancho', Cursive;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #324092;
+}
+
+@media screen and (max-width: 700px){
+.apps .apps-info .section-info{
+    width: 100%;
+}
+
+.apps .apps-info iframe{
+    width: 360px;
+    height: 205px;
+}
+
+.iframe-videos iframe{
+    width: 250px;
+    height: 150px;
+}
+}
+
+@media screen and (max-width: 300px){
+.apps .apps-info iframe{
+    width: 250px;
+    height: 160px;
+}
+}
+/* APPS */
+
+
+
+/* CONTACT */
+/* .contact{
+    background: #e3ebff;
+    padding: 20px 0px;
+    margin-top: 10px;
+}
+
+.contact .section-title{
+    color: black;
+}
+
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.name-email{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.name-email > input{
+    width: 49.6%;
+}
+
+.contact-form input, .contact-form textarea{
+    padding: 15px;
+    margin: 5px 0px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    font-family: 'Poppins', cursive;
+    font-size: 1rem;
+    color: #494949;
+}
+
+.contact-form input:focus, .contact-form textarea:focus{
+    outline: none;
+}
+
+*::placeholder{
+    color: #cecece;
+    font-family: 'Poppins', cursive;
+}
+
+textarea{
+    resize: vertical;
+}
+
+.contact-form .cform-submit-btn{
+    width: auto;
+    padding: 10px;
+    background: #441dff;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-family: 'Poppins', cursive;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 10px auto;
+    transition: 0.3s;
+    text-align: center;
+    transition-property: background, transform, font-size, letter-spacing;
+}
+
+.cform-submit-btn:hover{
+    background: tomato;
+    transform: rotate(-2deg);
+    letter-spacing: 5px;
+    font-size: 1.1rem;
+}
+
+
+@media screen and (max-width: 900px){
+.name-email{
+    flex-direction: column;
+}
+
+.name-email input{
+    width: 100%;
+}
+} */
+
+.contact{
+    background: rgba(167, 220, 255, 0.411);
+    padding: 10px 50px;
+}
+
+.contact .section-title{
+    color: black;
+}
+
+.contact-boxes{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-box{
+    width: 400px;
+    height: 70px;
+    background: darkslateblue;
+    margin: 10px 10px;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    transition: all 0.1s;
+}
+
+.contact-icon{
+    width: 20%;
+    padding: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-box:first-child .contact-icon{
+    background: #ff5d78;
+    box-shadow: 0px 0px 3px #dd005c;
+}
+
+.contact-box:first-child{
+    background: #ff6881;
+}
+
+.contact-box:nth-child(2) .contact-icon{
+    background: #0051ff;
+    box-shadow: 0px 0px 3px #000dc2;
+}
+
+.contact-box:nth-child(2){
+    background: #0051ff;
+}
+
+.contact-box:nth-child(3) .contact-icon{
+    background: #7700ff;
+    box-shadow: 0px 0px 3px #2f007a;
+}
+
+.contact-box:nth-child(3){
+    background: #7700ff;
+}
+
+.contact-box:hover{
+    background-color: #4893d4;
+}
+
+.contact-icon i{
+    color: white;
+    font-size: 30px;
+}
+
+.contact-link{
+    width: 80%;
+    padding: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+
+@media screen and (max-width: 700px){
+.contact{
+    padding: 10px 10px;
+}
+
+.contact-box{
+    width: 400px;
+}
+
+.contact-link{
+    font-size: 0.8rem;
+}
+}
+
+
+@media screen and (max-width: 400px){
+.contact-box{
+    width: 300px;
+    box-sizing: border-box;
+}
+
+.contact-link{
+    padding: 0px;
+    width: 100%;
+}
+}
+
+
+/* CONTACT */
+
+
+
+
+/* FOOTER */
+.footer{
+    background: #393874;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer p{
+    font-family: 'Poppins', cursive;
+    color: white;
+    margin: 3px 0px;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 500px){
+.footer{
+    padding: 100px 20px;
+}
+
+.footer p{
+    font-size: 0.7rem;
+}
+}
+/* FOOTER */
